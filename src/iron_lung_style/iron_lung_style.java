@@ -64,7 +64,7 @@ public class iron_lung_style {
 		int currency = 0;
 		while(game == 0) {
 			speaker("\u001B[31m" + "|--------------------------------------------------------------------------------|");
-			speaker("|                                 Front                                          |");
+			speaker("|                                  Ship Console                                  |");
 			speaker("|           |********************************************************|           |");
 			speaker("|           |                                                        |           |");
 			speaker("|           |                                                        |           |");
