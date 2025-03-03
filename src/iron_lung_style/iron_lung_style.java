@@ -9,6 +9,7 @@ public class iron_lung_style {
 			case 0:
 				menuScreen();
 				String gameChange = userInput.nextLine();
+				randomizer();
 				if(gameChange.equals("Start")) {
 					gameState = 1;
 				}
@@ -20,7 +21,7 @@ public class iron_lung_style {
 				
 			case 1:
 				
-				game();
+				game1();
 				speaker("Software Terminated");
 				break;
 				
@@ -56,7 +57,7 @@ public class iron_lung_style {
 		
 	}
 	
-	public static void game() {
+	public static void game1() {
 		Scanner userInput = new Scanner(System.in);
 		int game = 0;
 		int health = 100;
@@ -95,7 +96,7 @@ public class iron_lung_style {
 			if(response.equalsIgnoreCase("Map")) {
 				maps();
 				response = userInput.nextLine();
-			}
+			}			
 			
 		}
 	}
@@ -127,4 +128,15 @@ public class iron_lung_style {
 	       }
 	       System.out.println("---------------------\n");
 	   }
+
+	public static void randomizer() {
+		long currentMillis = System.currentTimeMillis();
+		int seed = (int) currentMillis;
+		for(int i = 1; i < 25; i++) {
+			int random1 = 2065 + i;
+			seed = (int) (((seed * random1 + 300)%random1)-(seed * random1 + 300));
+			speaker("Random Number:" + (int)(seed));
+		}
+		
+	}
 }
