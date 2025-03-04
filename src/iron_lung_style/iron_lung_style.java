@@ -104,13 +104,17 @@ public class iron_lung_style {
 	   }
 	
 	public static void randomizer() {
+		int random_num =0;
+		for(int j =0; j < 10; j++) {
 		int i = 0;
 		int min_value = 0+i;
 		int max_value = 100;
 		int difference = max_value-min_value;
-		int random_num = (int)((difference*Math.random())+min_value);
-		speaker(random_num + "%");
+		random_num = (int)((difference*Math.random())+min_value);
 		i++;
+		}
+		speaker(random_num + "%");
+		
 		}
 	
 	public static void speaker(String s) {
