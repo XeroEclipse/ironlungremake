@@ -7,6 +7,7 @@ public class iron_lung_style {
 		while(true) {
 			switch(gameState){
 			case 0:
+				introduction();
 				menuScreen();
 				String gameChange = userInput.nextLine();
 				randomizer();
@@ -25,6 +26,39 @@ public class iron_lung_style {
 				break;
 			}
 		}
+	}
+	
+	public static void introduction() {
+		speaker("--Initializing--");
+		speaker("--Downloading latest package--");
+		speaker("\n");
+		speaker("_     _ _______ _______" ); 
+    		speaker("|     | |______ |______"  );
+    		speaker("|_____| ______| |");
+		
+		speaker("\u001B[31m" + "Welcome prisoner");
+		speaker("You are now aboard USF Achilles of the enigma sector");
+		speaker("You should already be acquatted with your tasks during your trial but if not we shall go over");
+		speaker("If you already know your duties pleas type SKIP to forward this sequence");
+		speaker("As a plea for guilty and treason you have been subjicated to this space station and will be tasked with duties commanded by your superiors");
+		speaker("your task is to board a HV55 model submarine to scavange resources and explore areas of interest to us");
+		speaker("due to the lack of resources and the high pressure of the waters you will traverse your vessel has been slightly modified");
+		speaker("The submarine does not have a window for you too vieew as the pressure of the deep water will shatter your glass");
+		speaker("to accomody this we created a camera that will be able to last the high pressure but can only take a picture at a time, type CAMERA to take a picture");
+		speaker("A computer system was also implemented into the vessel which will be of use to you to help you with your tasks");
+		speaker("you are also given a map within the system which will show your points of interest and extraction points type map to open it in the submarine console");
+		speaker("The system will also be able to identify local fauna by taking a picture of whatever is near you with the camera which will be inputted into the Beastiary");
+		speaker("you can access the beastiary by typing BEASTIARY");
+		speaker("Be weary of some creatures as they may be hostile but you will be able to stay clear of scare of aggresive creatures if you read about them from the beastiary");
+		speaker("you're O2 meter is not permenant either");
+		speaker("due to the high pressure it will deplete quickly every ten steps you make");
+		speaker("You can view you're O2 meter from the ship console");
+		speaker("The more areas of interest and objects you explore and extract for us the more you will earn USC credits");
+		speaker("These credits will allow you to supply yourself with upgrades for your submarine though the ones who do the changes are from third party sources");
+		speaker("With this we conclude");
+		speaker("Goodluck prisonor your efforts are of great value to us");
+		speaker("--USC--");
+		speaker("--System shutting down--");
 	}
 	
 	public static void menuScreen() {
