@@ -27,7 +27,9 @@ public class iron_lung_style {
 			}
 		}
 	}
-	
+
+
+	//introductory screen/Tutorial
 	public static void introduction() {
 		speaker("--Initializing--");
 		speaker("--Downloading latest package--");
@@ -35,7 +37,8 @@ public class iron_lung_style {
     		speaker("|     | |______ |______");
     		speaker("|_____| ______| |");
 		speaker("\n");
-		
+
+		//Intro sequence where playe rcan input yes or no to continue with the tutorial
 		speaker("\u001B[31m" + "Welcome prisoner");
 		speaker("You are now aboard USF Achilles of the enigma sector");
 		speaker("You should already be acquatted with your tasks during your trial but if not we shall go over");
@@ -74,7 +77,9 @@ public class iron_lung_style {
 				Thread.Sleep(1000);
 		}
 	}
-	
+
+
+		// Main Menu
 	public static void menuScreen() {
 		speaker("\u001B[31m" + "|--------------------------------------------------------------------------------|");
 		speaker("|                                                                                |");
@@ -92,15 +97,16 @@ public class iron_lung_style {
 		
 		
 	}
-	
+
+		// Ship terminal
 	public static void game1() {
 		Scanner userInput = new Scanner(System.in);
 		int game = 0;
 		int health = 100;
 		int currency = 0;
 		while(game == 0) {
-			speaker("\u001B[31m" + "|--------------------------------------------------------------------------------|");
-			speaker("|                                 Front                                            |");
+			speaker("\u001B[31m" + "|-----------------------------------------------------------------------------|");
+			speaker("|                                Ship Terminal                                          |");
 			speaker("|           |********************************************************|  |=========||");
 			speaker("|           |                                                        |  |BEASTIARY||");
 			speaker("|           |                                                        |  |_________||");
@@ -125,7 +131,9 @@ public class iron_lung_style {
 			
 		}
 	}
-	
+
+
+		//Maps
 	public static void maps() {
 		randomizer();
 		int playerX = 10;
