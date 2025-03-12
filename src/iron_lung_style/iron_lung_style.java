@@ -136,8 +136,8 @@ public class iron_lung_style {
 		//Maps
 	public static void maps() {
 		randomizer();
-		int playerX = 10;
-		int playerY = 10;
+		int playerX = 1;
+		int playerY = 1;
 		int WIDTH = 10;
 		int HEIGHT = 6;
 		   // Map with walls ('#') and open spaces ('.')
@@ -149,10 +149,18 @@ public class iron_lung_style {
 			       {'#', '.', '.', '#', '#', '#', '.', '.', '.', '#'},
 			       {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
 			   };
+
+
+
+if (biome1[playerY][playerX] == '.') {
+	biome1[PlayerY][PlayerX] = '@';
+}
+
+		
 	     System.out.println("\n-------- MAP ---------");
 		 for (int y = 0; y < HEIGHT; y++) {
 	           for (int x = 0; x < WIDTH; x++) {
-	                   System.out.print(biome1[y][x]); // Display map
+	                   System.out.print(biome1[y][x] + ""); // Display map
 	               }
 	           System.out.println();
 	       }
