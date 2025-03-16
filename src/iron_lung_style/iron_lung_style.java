@@ -244,6 +244,18 @@ public class iron_lung_style {
 		}
 	}
 
+
+
+	public static void viewBestiary() {
+		speaker("BEASTIARY);
+		if (bestiary.isEmpty()) {
+			speaker("No data available");
+		} else {
+			for (String creature : bestiary) {
+				speaker("- " + creature);
+			}
+	}
+
 	// Maps
 	public static void maps() {
 		randomizer();
