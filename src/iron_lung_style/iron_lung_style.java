@@ -322,10 +322,10 @@ public class iron_lung_style {
 		int enemy_health = 100;
 		int player_health = 100;
 		Scanner userInput = new Scanner(System.in);
-		speaker("A" + "Shark" + "Has appeared");
+		speaker("LOCAL FAUNA DETECTED:" + "Razorfin" + "HAS APPROACHED THE VESSEL");
 		while (!(enemy_health < 0 || player_health < 0)) {
 
-			speaker("What would you like to do?");
+			speaker("What will your action be?");
 
 			speaker("--Attack--" + "\n--Block--");
 
@@ -335,34 +335,34 @@ public class iron_lung_style {
 
 				enemy_health = enemy_health - randomizer(0, 25);
 
-				speaker("Enemy now has" + enemy_health);
+				speaker("THREAT HP:" + enemy_health);
 
 				int enemy_move = enemy_ai();
 
 				if (enemy_move > 50) {
 					player_health = player_health - enemy_move;
-					speaker("Player Health is " + player_health);
+					speaker("VESSEL HP:" + player_health);
 				}
 
 				else {
 					player_health = player_health;
-					speaker("Player Health is " + player_health);
+					speaker("VESSEL HP:" + player_health);
 				}
 
 			}
 
 			else if (player_choice.equalsIgnoreCase("Block")) {
 				player_health = player_health;
-				speaker("Player Health is " + player_health);
+				speaker("VESSEL HP:" + player_health);
 			}
 
 			if (!(player_health > 0)) {
-				speaker("Game Over");
+				speaker("MISSION FAILED");
 				System.exit(0);
 			}
 
 			else if (!(enemy_health > 0)) {
-				speaker("Congratulations, you survived");
+				speaker("THREAT NEUTRALIZED");
 				speaker("SYSTEM.REDIRECT.TERMINAL");
 				int currency = randomizer(0, 100);
 				Front(currency);
@@ -375,7 +375,7 @@ public class iron_lung_style {
 	public static int enemy_ai() {
 		int random_atk = randomizer(0, 100);
 		if (random_atk > 50) {
-			speaker("Opponent has done" + random_atk);
+			speaker("OPPOSING THREAT DAMAGE:" + random_atk);
 		} else {
 
 		}
